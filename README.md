@@ -27,4 +27,4 @@ Proposto pelo professor Pedro Rafante, na instituição de ensino Proz Educaçã
 <a href="https://pedroduraesdev.github.io/jogo-da-velha/">DEMO!</a>
 
 ## :dart: Status do projeto
-Completo :white_check_mark.
+Completo ✅.
