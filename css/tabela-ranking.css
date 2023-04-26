@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-text-primary: #1c2a38;
+  --color-text-secondary: #8a8f98;
+  --color-text-alert: #d72641;
+  --color-text-icon: #dbdade;
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #f3f5f9;
+  --color-bg-alert: #fdeaec;
+  --color-theme-primary: #623ce6;
+  --color-bg-custom: #28292d;
+}
+
+.match {
+  background-color: var(--color-bg-custom);
+  display: flex;
+  flex-direction: column;
+  width: 376px;
+  height: 416px;
+  margin-top: 2px;
+  margin-left: 2px;
+  border-radius: 8px;
+}
+
+.match-header {
+  padding: 16px;
+  align-items: center;
+}
+
+.h2-match {
+  padding-top: 50px;
+}
+
+.match-tournament {
+  align-items: center;
+  font-weight: 600;
+}
+
+.logo-jogador {
+  width: 100px;
+  margin-right: 4px;
+}
+
+.match-content {
+  display: flex;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  z-index: 3;
+  border-radius: 8px;
+}
+
+.column {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 3);
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-bg-primary);
+}
+
+.team-name {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.match-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.match-score {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  color: #45f3ff;
+}
+
+.match-score-number {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.match-score-divider {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: var (--color-text-icon);
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.placar {
+  position: relative;
+  inset: 2px;
+  width: 380px;
+  height: 420px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 2;
+  max-width: 100%;
+}
+
+.match::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+.match::before{
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  animation: animate 6s linear infinite;
+}
+
+.btnpartida, .btnplacar {
+  border: none;
+  padding: 10px 25px;
+  background: #45f3ff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 150px;
+  margin-top: 5px;
+}
+
+.btnplacar {
+  margin-left: 10px;
+}
+
+.btnsright{
+  padding-left: 30px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilo para telas menores que 430px */
+@media screen and (max-width: 400px) {
+  .placar {
+    display: block;
+  }
+  .match {
+    max-width: 100%;
+    display: block;
+  }
+  .match-score-number, .match-score-divider {
+    font-size: 30px;
+    padding-top: 50px;
+  }
+  .team-logo {
+    width: 100%;
+  }
+  .btnsright {
+    padding-left: 10px;
+  }
+}

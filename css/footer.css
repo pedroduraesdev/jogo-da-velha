@@ -1,0 +1,30 @@
+.footer {
+  padding-top: 80px;
+}
+
+a {
+  box-shadow: inset 0 0 0 0 #fff;
+  color: #fff;
+  padding: 0 0.25rem;
+  margin: 0 -0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+a:hover {
+  color: #23242a;
+  box-shadow: inset 200px 0 0 0 #fff;
+}
+
+a {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/icon-nav.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/game-tabela.css" />
+    <link rel="stylesheet" href="css/style-form.css" />
+    <link rel="stylesheet" href="css/tabela-ranking.css" />
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Jogo da Velha</title>
+  </head>
+
+  <body class="body">
+    <div class="container">
+      <div class="left">
+        <div class="box">
+          <form>
+            <h2>Vamos jogar?</h2>
+            <div class="inputBox">
+              <input
+                type="text"
+                required="required"
+                name="nome"
+                id="jogador1"
+              />
+              <span>Jogador 1</span>
+              <i></i>
+            </div>
+            <div class="inputBox">
+              <input
+                type="text"
+                required="required"
+                nome="nome"
+                id="jogador2"
+              />
+              <span>Jogador 2</span>
+              <i></i>
+            </div>
+            <input
+              type="button"
+              value="Iniciar"
+              onclick="javascript: initGame();"
+              class="btniniciar"
+            />
+          </form>
+        </div>
+
+        <h3 id="jogadorAtual"></h3>
+        <div id="game">
+          <table class="game-board">
+            <tr class="tr-table1">
+              <td onclick="javascript: setOnCeil(this, 0)" class="td-table1">
+                &nbsp;
+              </td>
+              <td onclick="javascript: setOnCeil(this, 1)" class="td-table1">
+                &nbsp;
+              </td>
+              <td onclick="javascript: setOnCeil(this, 2)" class="td-table1">
+                &nbsp;
+              </td>
+            </tr>
+            <tr class="tr-table1">
+              <td onclick="javascript: setOnCeil(this, 3)" class="td-table1">
+                &nbsp;
+              </td>
+              <td onclick="javascript: setOnCeil(this, 4)" class="td-table1">
+                &nbsp;
+              </td>
+              <td onclick="javascript: setOnCeil(this, 5)" class="td-table1">
+                &nbsp;
+              </td>
+            </tr>
+            <tr class="tr-table1">
+              <td onclick="javascript: setOnCeil(this, 6)" class="td-table1">
+                &nbsp;
+              </td>
+              <td onclick="javascript: setOnCeil(this, 7)" class="td-table1">
+                &nbsp;
+              </td>
+              <td onclick="javascript: setOnCeil(this, 8)" class="td-table1">
+                &nbsp;
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="right" id="right">
+        <div class="placar">
+          <div class="match">
+            <h2 class="h2-match">Placar</h2>
+            <div class="match-content">
+              <div class="column">
+                <div class="team team--home">
+                  <div class="team-logo">
+                    <img src="img/controle.png" class="logo-jogador" />
+                  </div>
+                  <h2 class="team-name" id="jg1"></h2>
+                </div>
+              </div>
+              <div class="column">
+                <div class="match-details">
+                  <div class="match-score">
+                    <span class="match-score-number" id="pontosjg1">0</span>
+                    <span class="match-score-divider">:</span>
+                    <span class="match-score-number" id="pontosjg2">0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="team team--away">
+                  <div class="team-logo">
+                    <img src="img/controle.png" class="logo-jogador" />
+                  </div>
+                  <h2 class="team-name" id="jg2"></h2>
+                </div>
+              </div>
+            </div>
+            <div class="btnsright">
+              <input
+                type="button"
+                value="Reiniciar Partida"
+                onclick="javascript: window.location.reload();"
+                class="btnpartida"
+              />
+              <input
+                type="button"
+                value="Reiniciar Placar"
+                onclick="javascript: zerarPlacar ();"
+                class="btnplacar"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="footer">
+    <h1>Desenvolvido por <a href="https://github.com/pedroduraesdev" target="_blank">Pedro Durães</a> e <a href="https://github.com/JoaoPVaz" target="_blank">João Paulo</a>.</h1>
+   </div>
+  </footer>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/scripts.js"></script>
+</html>
